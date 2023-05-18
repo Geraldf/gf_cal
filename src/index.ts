@@ -1,3 +1,5 @@
-import Button from "./components/Button";
+import Cal from "./components/Cal";
+import { CalDataType, MonthProps } from "./components/Types";
 
-export { Button };
+export { Cal };
+export type { CalDataType, MonthProps };

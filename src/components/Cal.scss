@@ -1,0 +1,74 @@
+@import "lib";
+
+.week-separator {
+    padding: 5px;
+}
+
+
+
+.CalMain {
+    border-style: solid;
+    border-width: 1px;
+    padding: 20px;
+
+}
+
+.headernormal {
+    font-weight: 300;
+    color: white;
+    padding: 0px $table-header-padding 0px $table-header-padding;
+    font-size: small;
+
+}
+
+.headerrow {
+    background: black;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 0px;
+
+}
+
+.bolder {
+    color: white;
+    padding: 0px $table-header-padding 0px $table-header-padding;
+    font-size: small;
+
+}
+
+table.calendar td {
+    text-align: center;
+    padding: $table-padding;
+    cursor: pointer;
+    border: 1px solid rgba(185, 185, 185, 0.13);
+    background-color: white;
+    //min-width: 5px;
+    font-size: small;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+table.calendar td.noday {
+    background-color: #eee;
+}
+
+table.calendar td.data-1 {
+    background-color: #cdeed2;
+}
+
+table.calendar td.data-2 {
+    background-color: #d1bcf5;
+}
+
+.TooltipDatum {
+    font-size: small;
+    text-decoration: underline;
+}
+
+.TooltipInfo {
+    font-size: medium
+}
