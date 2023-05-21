@@ -4,3 +4,8 @@ storybook-static/
 yarn.lock
 .yarnrc.yml
 .yarn/
+.pnp.cjs
+.npm
+.pnp.loader.mjs
+yarn.lock
+
