@@ -1,10 +1,13 @@
 {
   "name": "@geraldf/gf_cal",
-  "version": "0.0.6",
+  "version": "0.0.10",
   "description": "Yearly Calendar component",
-  "main": "lib/index.js",
-  "module": "lib/index.esm.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/geraldf"
   },
