@@ -2,7 +2,8 @@
 
 import type { Meta, StoryObj } from "@storybook/react";
 
-import Cal from "./Cal";
+//import Cal from "./Cal";
+import Cal from "../../dist";
 import moment from "moment";
 
 const meta: Meta<typeof Cal> = {

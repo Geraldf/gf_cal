@@ -2,23 +2,14 @@ import moment from "moment";
 import React from "react";
 import Day from "./Day";
 import { range } from "./utils";
-import { CalDataType, Color, MonthProps } from "./Types";
+import { Color, MonthProps } from "./Types";
 
-type Props = {
-  month: number;
-  year: number;
-  firstDayOfWeek?: number;
-  forceFullWeeks?: boolean;
-  showWeekSeperator?: boolean;
-  dataColors?: Color[];
-  calDatas?: CalDataType[];
-};
 const myDayClicked = (e: React.MouseEvent<HTMLElement, MouseEvent>): void => {
-  throw new Error("Function not implemented.");
+  throw new Error("Function not implemented." + e);
 };
 
 const myDayHovered = (e: React.MouseEvent<HTMLElement, MouseEvent>): void => {
-  throw new Error("Function not implemented.");
+  throw new Error("Function not implemented." + e);
 };
 
 function Month(monthProps: MonthProps) {
@@ -29,7 +20,6 @@ function Month(monthProps: MonthProps) {
     forceFullWeeks = false,
     showWeekSeperator = false,
     calDatas,
-    dataBackgroundColor,
   } = monthProps;
 
   const totalDays = forceFullWeeks ? 42 : 37;

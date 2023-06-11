@@ -1,0 +1,60 @@
+import babel from "rollup-plugin-babel";
+import postcss from "rollup-plugin-postcss";
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import typescript from "@rollup/plugin-typescript";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import { visualizer } from "rollup-plugin-visualizer";
+import eslint from "@rollup/plugin-eslint";
+import scss from "rollup-plugin-scss";
+import autoprefixer from "autoprefixer";
+
+export default {
+  input: "./src/index.ts",
+
+  output: [
+    {
+      dir: "dist",
+      format: "esm",
+      preserveModules: false,
+      preserveModulesRoot: "src",
+      sourcemap: true,
+    },
+  ],
+
+  plugins: [
+    eslint({
+      /* your options */
+      exclude: ["node_modules/**"],
+      include: ["src/**/*.js", "src/**/*.ts"],
+    }),
+
+    //commonjs(),
+    peerDepsExternal(),
+    nodeResolve(),
+    typescript({
+      tsconfig: "./tsconfig.json",
+      declaration: true,
+      declarationDir: "dist",
+    }),
+    scss({
+      output: "./dest/css/style.css",
+      failOnError: true,
+      runtime: require("sass"),
+    }),
+    // postcss({
+    //   extract: false,
+    //   modules: true,
+    //   use: ["sass"],
+    // }),
+    babel({ exclude: "node_modules/**" }),
+    // resolve(),
+    commonjs(),
+    visualizer({
+      filename: "bundle-analysis.html",
+      open: false,
+    }),
+  ],
+
+  external: ["react", "react-dom"],
+};

@@ -8,9 +8,11 @@ const Day: React.FC<DayProps> = (props) => {
 
   const _dayClicked = (event: React.MouseEvent<HTMLElement>): void => {
     const el = event.target as HTMLInputElement;
+    console.log(el);
   };
   const _dayHovered = (event: React.MouseEvent<HTMLElement>) => {
     const el = event.target as HTMLInputElement;
+    console.log(el);
   };
   const HtmlTooltip = styled(({ className, ...htmlProps }: TooltipProps) => (
     <Tooltip {...htmlProps} classes={{ popper: className }} />
