@@ -1,6 +1,6 @@
 {
   "name": "@geraldf/gf_cal",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Yearly Calendar component",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
