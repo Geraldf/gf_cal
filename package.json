@@ -37,7 +37,7 @@
     "audit:fix": "npx yarn-audit-fix",
     "prepare": "yarn build",
     "prerelease": "yarn lint:fix && yarn test:coverage",
-    "release": "yarn version && yarn npm publish",
+    "release": "npm version patch && yarn npm publish",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
     "predeploy": "yarn storybook:build",
